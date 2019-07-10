@@ -22,6 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
 # Inherit some common BeastROMs stuff.
+BEAST_BUILD_TYPE := OFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, vendor/beast/config/common.mk)
 
@@ -34,4 +35,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_PACKAGES += \
-    messaging
+    messaging \
+    Updates
