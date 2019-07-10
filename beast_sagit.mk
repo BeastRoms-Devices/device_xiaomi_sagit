@@ -21,18 +21,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
-$(call inherit-product, vendor/nitrogen/products/common.mk)
+# Inherit some common BeastROMs stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/beast/config/common.mk)
 
-PRODUCT_NAME := nitrogen_sagit
+PRODUCT_NAME := beast_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# Bootanimation
-TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_PACKAGES += \
     messaging
